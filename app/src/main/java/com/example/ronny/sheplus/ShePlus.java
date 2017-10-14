@@ -1,5 +1,6 @@
 package com.example.ronny.sheplus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,9 +13,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.braunster.chatsdk.activities.ChatSDKLoginActivity;
 
 public class ShePlus extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    protected DrawerLayout drawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +30,15 @@ public class ShePlus extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        public void onClick(View view) {
+                Snackbar.make(view, "Help?", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-
+*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -67,9 +74,7 @@ public class ShePlus extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -80,19 +85,36 @@ public class ShePlus extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.sheplus_home) {
+            Intent sheplusHome =new Intent(ShePlus.this,Home_nav.class);
+            startActivity(sheplusHome);
+        } else if (id == R.id.newsletter) {
+            Toast.makeText(this, "You are welcome to youngvoices.org", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_slideshow) {
+        }  else if (id == R.id.nav_share) {
+            String shareBody = "Download SHE+ App. From https://github.com/SGSCollect/SHEPLUS";
+            final Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(intent.EXTRA_TEXT, shareBody);
+            try{
+                startActivity(intent.createChooser(intent, "Share SHE+ Using"));
+            }catch (android.content.ActivityNotFoundException exception){
+                //handle error
+            }
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if(id==R.id.chat_us){
+            Intent chatsdk = new Intent(ShePlus.this, ChatSDKLoginActivity.class);
+            startActivity(chatsdk);
 
         }
+        else if(id==R.id.nav_facebook){
+            Toast.makeText(this, "You are welcome to our facebook page", Toast.LENGTH_SHORT).show();
+        }
+        else if(id==R.id.call_center){
+            Toast.makeText(this, "You are welcome to our call center", Toast.LENGTH_SHORT).show();
+        }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
