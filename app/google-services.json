@@ -36,6 +36,37 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421553637428:android:8b2761c6dae25a8d",
+        "android_client_info": {
+          "package_name": "com.example.ronny.sheplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421553637428-jgs3t26bqts5lsm3j34akbt4obmp75m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFf5DR-u6jp02qdyMHo7EwY8uSJG_mshs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
