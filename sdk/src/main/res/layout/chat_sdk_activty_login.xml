@@ -97,18 +97,15 @@
             android:layout_above="@+id/li_version">
 
             <com.facebook.widget.LoginButton
-                xmlns:fb="http://schemas.android.com/apk/res-auto"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="5dp"
-                android:text=""
-                fb:login_text=""
-                fb:logout_text=""
                 android:id="@+id/chat_sdk_facebook_button"
-                android:background="@drawable/ic_facebook"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
+            />
 
-            <Button
+            <!--<Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="5dp"
@@ -120,7 +117,7 @@
                 android:layout_height="48dp"
                 android:background="@drawable/ic_google"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/chat_sdk_btn_google_login"/>
+                android:id="@+id/chat_sdk_btn_google_login"/>-->
 
         </LinearLayout>
 

@@ -34,7 +34,7 @@ import android.widget.TextView;
 
 public class ToolTipPopup {
     
-    public static enum Style {
+    public enum Style {
         /**
          * The tool tip will be shown with a blue style; including a blue background and blue
          * arrows.
@@ -128,7 +128,7 @@ public class ToolTipPopup {
             final int decorWidth = decorView.getWidth();
             final int decorHeight = decorView.getHeight();
             registerObserver();
-            mPopupContent.onMeasure(
+            mPopupContent.measure(
                     View.MeasureSpec.makeMeasureSpec(decorWidth, View.MeasureSpec.AT_MOST), 
                     View.MeasureSpec.makeMeasureSpec(decorHeight, View.MeasureSpec.AT_MOST));
             mPopupWindow = new PopupWindow(

@@ -262,8 +262,8 @@ public class Session implements Serializable {
      *
      * @param currentContext The Activity or Service creating this Session.
      */
-    public Session(Context currentContext) {
-        this(currentContext, null, null, true);
+    public  Session(Context currentContext) {
+       this(currentContext, null, null, true);
     }
 
     Session(Context context, String applicationId, TokenCachingStrategy tokenCachingStrategy) {
@@ -306,7 +306,7 @@ public class Session implements Serializable {
                 this.tokenInfo = AccessToken.createEmptyToken(Collections.<String>emptyList());
             } else {
                 // Otherwise we have a valid token, so use it.
-                this.tokenInfo = AccessToken.createFromCache(tokenState);
+          this.tokenInfo = AccessToken.createFromCache(tokenState);
                 this.state = SessionState.CREATED_TOKEN_LOADED;
             }
         } else {

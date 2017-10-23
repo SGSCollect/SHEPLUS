@@ -44,11 +44,8 @@ public class ChatSDKLoginActivity extends ChatSDKAbstractLoginActivity implement
         enableFacebookIntegration(getNetworkAdapter().facebookEnabled());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_sdk_activty_login);
-
         setExitOnBackPressed(true);
-
         View view = findViewById(R.id.chat_sdk_root_view);
-        
         setupTouchUIToDismissKeyboard(view);
 
         initViews();
@@ -70,7 +67,7 @@ public class ChatSDKLoginActivity extends ChatSDKAbstractLoginActivity implement
 
         btnLogin = (Button) findViewById(R.id.chat_sdk_btn_login);
         btnAnon = (Button) findViewById(R.id.chat_sdk_btn_anon_login);
-        btnTwitter = (Button) findViewById(R.id.chat_sdk_btn_twitter_login);
+
         btnReg = (Button) findViewById(R.id.chat_sdk_btn_register);
         etEmail = (EditText) findViewById(R.id.chat_sdk_et_mail);
         etPass = (EditText) findViewById(R.id.chat_sdk_et_password);
@@ -147,9 +144,9 @@ public class ChatSDKLoginActivity extends ChatSDKAbstractLoginActivity implement
         {
             register();
         }
-        else if (i == R.id.chat_sdk_btn_twitter_login){
+       /* else if (i == R.id.chat_sdk_btn_twitter_login){
             twitterLogin();
-        }
+        }*/
     }
 
 }

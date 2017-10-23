@@ -6,20 +6,15 @@
 
         <item android:id="@+id/sheplus_home"
             android:title="Home"
-            android:icon="@drawable/sheplusplus"
+            android:icon="@drawable/ic_home_black_24dp"
             />
 
 
         <item android:id="@+id/newsletter"
             android:title="Newsletter"
-            android:icon="@drawable/newsletter"
+            android:icon="@drawable/ic_rss_feed_black_24dp"
 
             />
-
-
-        <item android:id="@+id/call_center"
-            android:title="Call Center"
-            android:icon="@drawable/call_us"/>
 
     </group>
 
@@ -31,12 +26,14 @@
                 android:title="Share" />
             <item
                 android:id="@+id/nav_facebook"
-                android:icon="@drawable/facebook"
-                android:title="SHE+" />
+                android:icon="@drawable/ic_facebook"
+                android:title="SHE+ Social" />
 
-            <item android:id="@+id/chat_us"
-                android:icon="@drawable/sheplusplus"
-                android:title="SheChat Forum"/>
+            <item
+                android:id="@+id/she_chat"
+                android:icon="@drawable/ic_chat_black_24dp"
+                android:title="SheChat" />
+
         </menu>
     </item>
 

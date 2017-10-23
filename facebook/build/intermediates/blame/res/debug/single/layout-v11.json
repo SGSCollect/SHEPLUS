@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/RONNY/Downloads/SHEPLUS/facebook/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/RONNY/.android/build-cache/7ead5b1b93ae096fd11b7fef394e0215c5d38248/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/RONNY/Downloads/SHEPLUS/facebook/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/RONNY/.android/build-cache/7ead5b1b93ae096fd11b7fef394e0215c5d38248/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/RONNY/Downloads/SHEPLUS/facebook/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/RONNY/.android/build-cache/7ead5b1b93ae096fd11b7fef394e0215c5d38248/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/RONNY/Downloads/SHEPLUS/facebook/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/RONNY/.android/build-cache/7ead5b1b93ae096fd11b7fef394e0215c5d38248/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/RONNY/Downloads/SHEPLUS/facebook/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/RONNY/.android/build-cache/7ead5b1b93ae096fd11b7fef394e0215c5d38248/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/RONNY/Downloads/SHEPLUS/facebook/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/RONNY/.android/build-cache/7ead5b1b93ae096fd11b7fef394e0215c5d38248/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    }
+]

@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">SHE+ </string>
+  <string name="app_name">SHE+</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -9,4 +9,10 @@
     <string name="home">Home</string>
     <string name="newsletter">Newsletter</string>
     <string name="my_account">My Account</string>
+    <string name="phone_one">0202329871</string>
+    <string name="phone_two">0553744279</string>
+    <string name="call_now">For Further Enquiries, please call</string>
+  <string name="facebook_app_id">136805810300378</string>
+  <string name="fb_login_protocol_scheme">fb136805810300378</string>
+
 </resources>

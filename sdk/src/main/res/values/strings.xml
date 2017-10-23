@@ -5,7 +5,8 @@
 
     <!--Api-Keys-->
         <!--Facebook-->
-        <string name="facebook_id">966932090008976</string>
+        <string name="facebook_id">136805810300378</string>
+
 
         <!--Google Maps-->
         <string name="google_maps_api_key">AIzaSyDhk2BmGnhRY5YunvYWCEs0r-aq4X32TO8</string>

@@ -1,6 +1,7 @@
 package com.example.ronny.sheplus;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,7 +16,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.braunster.chatsdk.activities.ChatSDKBaseActivity;
+import com.braunster.chatsdk.activities.ChatSDKLocationActivity;
 import com.braunster.chatsdk.activities.ChatSDKLoginActivity;
+import com.braunster.androidchatsdk.firebaseplugin.firebase.BChatcatNetworkAdapter;
+import com.braunster.chatsdk.Utils.helper.ChatSDKUiHelper;
+import com.braunster.chatsdk.activities.ChatSDKMainActivity;
+import com.braunster.chatsdk.network.BDefines;
+import com.braunster.chatsdk.network.BNetworkManager;
+import com.braunster.chatsdk.activities.ChatSDKLoginActivity;
+
 
 public class ShePlus extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -30,15 +40,21 @@ public class ShePlus extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        /*fab.setOnClickListener(new View.OnClickListener() {
+
+        ChatSDKUiHelper.initDefault();
+        BNetworkManager.init(getApplicationContext());
+        BChatcatNetworkAdapter adapter = new BChatcatNetworkAdapter(getApplicationContext());
+        BNetworkManager.sharedManager().setNetworkAdapter(adapter);
+/*
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-        public void onClick(View view) {
-                Snackbar.make(view, "Help?", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view) {
+                Intent chatsdk = new Intent(ShePlus.this, ChatSDKLoginActivity.class);
+                startActivity(chatsdk);
             }
-        });
-*/
+        });*/
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -86,10 +102,14 @@ public class ShePlus extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.sheplus_home) {
-            Intent sheplusHome =new Intent(ShePlus.this,Home_nav.class);
+            Intent sheplusHome =new Intent(ShePlus.this,ShePlus.class);
             startActivity(sheplusHome);
         } else if (id == R.id.newsletter) {
-            Toast.makeText(this, "You are welcome to youngvoices.org", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "You are welcome to youngvoices.org", Toast.LENGTH_SHORT).show();
+          String youngvoices = "http://www.savsign.org/";
+           Intent young = new Intent(Intent.ACTION_VIEW,Uri.parse(youngvoices));
+                    startActivity(young);
+
 
         }  else if (id == R.id.nav_share) {
             String shareBody = "Download SHE+ App. From https://github.com/SGSCollect/SHEPLUS";
@@ -102,17 +122,18 @@ public class ShePlus extends AppCompatActivity
                 //handle error
             }
 
-        } else if(id==R.id.chat_us){
-            Intent chatsdk = new Intent(ShePlus.this, ChatSDKLoginActivity.class);
-            startActivity(chatsdk);
-
         }
         else if(id==R.id.nav_facebook){
-            Toast.makeText(this, "You are welcome to our facebook page", Toast.LENGTH_SHORT).show();
+            String FacebookPageUrl = "https://www.facebook.com/SHEplusGhana/";
+            Intent shepluspage = new Intent(Intent.ACTION_VIEW, Uri.parse(FacebookPageUrl) );
+            startActivity(shepluspage);
         }
-        else if(id==R.id.call_center){
-            Toast.makeText(this, "You are welcome to our call center", Toast.LENGTH_SHORT).show();
+        else if(id==R.id.she_chat){
+
+            Intent chatsdk = new Intent(ShePlus.this, ChatSDKLoginActivity.class);
+            startActivity(chatsdk);
         }
+
 
 
 

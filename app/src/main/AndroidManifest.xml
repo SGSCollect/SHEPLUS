@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ronny.sheplus" >
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+     <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/sheplus_logo"
@@ -9,6 +13,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.braunster.chatsdk.activities.ChatSDKLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatSDKTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
         <activity
             android:name=".ShePlus"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -18,9 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.braunster.chatsdk.activities.ChatSDKLocationActivity"
-            android:parentActivityName=".ShePlus"
-            />
+
         <activity android:name=".Home_nav"
 
             android:parentActivityName=".ShePlus"/>
@@ -30,6 +61,8 @@
 
         <activity android:name=".Newsletter"
             android:parentActivityName=".ShePlus"/>
+
+
     </application>
 
 </manifest>

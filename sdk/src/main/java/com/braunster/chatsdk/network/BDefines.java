@@ -28,15 +28,15 @@ public class BDefines {
     public static String BAppVersion = BuildConfig.VERSION_NAME;
 
     /** The server url that is used to do all the API calls.*/
-    public static String ServerUrl = "https://chat-sdk-v4.firebaseio.com/" + BRootPath;
+    public static String ServerUrl = "https://sheplus-d5b43.firebaseio.com/" + BRootPath;
 
     /** The url that is used for the file uploads.*/
-    public static String FirebaseStoragePath = "gs://chat-sdk-v4.appspot.com";
+    public static String FirebaseStoragePath = "gs://sheplus-d5b43.appspot.com";
 
     /**
      * The name of the app image directory that will be seen in the phone image galley
      * */
-    public static final String ImageDirName = "AndroidChatSDK";
+    public static final String ImageDirName = "SheChat";
 
     public static final String BCloudImageToken = "skbb48";
 
