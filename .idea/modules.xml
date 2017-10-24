@@ -4,10 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SHEPLUS.iml" filepath="$PROJECT_DIR$/SHEPLUS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/country_picker/country_picker.iml" filepath="$PROJECT_DIR$/country_picker/country_picker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/facebook/facebook.iml" filepath="$PROJECT_DIR$/facebook/facebook.iml" />
-      <module fileurl="file://$PROJECT_DIR$/firebase_plugin/firebase_plugin.iml" filepath="$PROJECT_DIR$/firebase_plugin/firebase_plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sdk/sdk.iml" filepath="$PROJECT_DIR$/sdk/sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_sdk_core/chat_sdk_core.iml" filepath="$PROJECT_DIR$/chat_sdk_core/chat_sdk_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_sdk_firebase_adapter/chat_sdk_firebase_adapter.iml" filepath="$PROJECT_DIR$/chat_sdk_firebase_adapter/chat_sdk_firebase_adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_sdk_firebase_file_storage/chat_sdk_firebase_file_storage.iml" filepath="$PROJECT_DIR$/chat_sdk_firebase_file_storage/chat_sdk_firebase_file_storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_sdk_firebase_push/chat_sdk_firebase_push.iml" filepath="$PROJECT_DIR$/chat_sdk_firebase_push/chat_sdk_firebase_push.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_sdk_firebase_social_login/chat_sdk_firebase_social_login.iml" filepath="$PROJECT_DIR$/chat_sdk_firebase_social_login/chat_sdk_firebase_social_login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_sdk_ui/chat_sdk_ui.iml" filepath="$PROJECT_DIR$/chat_sdk_ui/chat_sdk_ui.iml" />
     </modules>
   </component>
 </project>

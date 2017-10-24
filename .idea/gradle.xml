@@ -10,10 +10,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/country_picker" />
-            <option value="$PROJECT_DIR$/facebook" />
-            <option value="$PROJECT_DIR$/firebase_plugin" />
-            <option value="$PROJECT_DIR$/sdk" />
+            <option value="$PROJECT_DIR$/chat_sdk_core" />
+            <option value="$PROJECT_DIR$/chat_sdk_firebase_adapter" />
+            <option value="$PROJECT_DIR$/chat_sdk_firebase_file_storage" />
+            <option value="$PROJECT_DIR$/chat_sdk_firebase_push" />
+            <option value="$PROJECT_DIR$/chat_sdk_firebase_social_login" />
+            <option value="$PROJECT_DIR$/chat_sdk_ui" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

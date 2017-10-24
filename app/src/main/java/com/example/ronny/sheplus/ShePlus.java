@@ -1,12 +1,10 @@
 package com.example.ronny.sheplus;
-
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.multidex.MultiDex;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,17 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.braunster.chatsdk.activities.ChatSDKBaseActivity;
-import com.braunster.chatsdk.activities.ChatSDKLocationActivity;
-import com.braunster.chatsdk.activities.ChatSDKLoginActivity;
-import com.braunster.androidchatsdk.firebaseplugin.firebase.BChatcatNetworkAdapter;
-import com.braunster.chatsdk.Utils.helper.ChatSDKUiHelper;
-import com.braunster.chatsdk.activities.ChatSDKMainActivity;
-import com.braunster.chatsdk.network.BDefines;
-import com.braunster.chatsdk.network.BNetworkManager;
-import com.braunster.chatsdk.activities.ChatSDKLoginActivity;
+import co.chatsdk.core.session.ChatSDK;
+import co.chatsdk.core.session.Configuration;
+import co.chatsdk.firebase.FirebaseModule;
+import co.chatsdk.firebase.file_storage.FirebaseFileStorageModule;
+import co.chatsdk.firebase.social_login.FirebaseSocialLoginModule;
+import co.chatsdk.ui.login.LoginActivity;
 
 
 public class ShePlus extends AppCompatActivity
@@ -40,11 +34,28 @@ public class ShePlus extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+// Enable multi-dexing
+        MultiDex.install(this);
 
-        ChatSDKUiHelper.initDefault();
-        BNetworkManager.init(getApplicationContext());
-        BChatcatNetworkAdapter adapter = new BChatcatNetworkAdapter(getApplicationContext());
-        BNetworkManager.sharedManager().setNetworkAdapter(adapter);
+        Context context = getApplicationContext();
+
+// Create a new configuration
+        Configuration.Builder builder = new Configuration.Builder(context);
+
+// Perform any configuration steps
+
+// Initialize the Chat SDK
+        ChatSDK.initialize(builder.build());
+
+        FirebaseSocialLoginModule.activate(getApplicationContext());
+
+
+// Activate the Firebase module
+        FirebaseModule.activate(context);
+
+// File storage is needed for profile image upload and image messages
+        FirebaseFileStorageModule.activate();
+
 /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +141,7 @@ public class ShePlus extends AppCompatActivity
         }
         else if(id==R.id.she_chat){
 
-            Intent chatsdk = new Intent(ShePlus.this, ChatSDKLoginActivity.class);
+            Intent chatsdk = new Intent(ShePlus.this, LoginActivity.class);
             startActivity(chatsdk);
         }
 

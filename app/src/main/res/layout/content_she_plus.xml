@@ -34,7 +34,7 @@
                         android:background="#f7f7f7"
                         android:layout_marginTop="20dp"
                         android:text="@string/call_now"
-                        android:textColor="@color/com_facebook_blue"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="20sp"
                         android:fontFamily="sans-serif"
                         android:textStyle="italic"
@@ -53,7 +53,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/com_facebook_blue"
+                    android:background="@color/colorPrimary"
                     android:orientation="vertical">
 
                     <LinearLayout
