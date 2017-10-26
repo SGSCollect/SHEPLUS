@@ -1,7 +1,5 @@
 package co.chatsdk.core.session;
 
-import android.support.annotation.Nullable;
-
 import co.chatsdk.core.base.BaseNetworkAdapter;
 import co.chatsdk.core.dao.User;
 import co.chatsdk.core.handlers.AudioMessageHandler;
@@ -32,7 +30,7 @@ public class NM {
     public static CoreHandler core () {
         return a().core;
     }
-   @Nullable public static AuthenticationHandler auth () {
+    public static AuthenticationHandler auth () {
         return a().auth;
     }
 

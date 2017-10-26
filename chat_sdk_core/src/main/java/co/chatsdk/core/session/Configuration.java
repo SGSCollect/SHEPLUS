@@ -70,10 +70,10 @@ public class Configuration {
     public int imageMaxThumbnailDimension = 600;
     public int maxInboxNotificationLines = 7;
 
-    public String defaultUserNamePrefix = "ChatSDK";
+    public String defaultUserNamePrefix = "SheChat";
     public String defaultUserName = defaultUserNamePrefix + String.valueOf(new Random().nextInt(1000));
-    public String imageDirectoryName = "ChatSDK";
-    public String contactDeveloperEmailAddress = "support@chatsdk.co";
+    public String imageDirectoryName = "SheChat";
+    public String contactDeveloperEmailAddress = "polleronny2@gmail.com";
     public String contactDeveloperEmailSubject = "";
     public String contactDeveloperDialogTitle = "";
     public String defaultUserAvatarURL = "http://flathash.com/" + String.valueOf(new Random().nextInt(1000)) + ".png";

@@ -63,15 +63,15 @@ public class FeedListAdapter extends BaseAdapter {
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
 
-        TextView name = convertView.findViewById(R.id.name);
-        TextView timestamp = convertView
+        TextView name = (TextView) convertView.findViewById(R.id.name);
+        TextView timestamp = (TextView) convertView
                 .findViewById(R.id.timestamp);
-        TextView statusMsg =  convertView
+        TextView statusMsg = (TextView) convertView
                 .findViewById(R.id.txtStatusMsg);
-        TextView url = convertView.findViewById(R.id.txtUrl);
-        NetworkImageView profilePic = convertView
+        TextView url = (TextView) convertView.findViewById(R.id.txtUrl);
+        NetworkImageView profilePic = (NetworkImageView) convertView
                 .findViewById(R.id.profilePic);
-        FeedImageView feedImageView = convertView
+        FeedImageView feedImageView = (FeedImageView) convertView
                 .findViewById(R.id.feedImage1);
 
         FeedItem item = feedItems.get(position);

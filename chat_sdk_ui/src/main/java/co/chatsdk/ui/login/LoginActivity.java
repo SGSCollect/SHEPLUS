@@ -70,11 +70,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         setupTouchUIToDismissKeyboard(mainView);
 
         getSupportActionBar().hide();
-        initViews();
-
+       initViews();
     }
 
-    @Nullable protected void initViews () {
+     protected void initViews () {
 
         btnLogin = (Button) findViewById(R.id.chat_sdk_btn_login);
         btnAnonymous = (Button) findViewById(R.id.chat_sdk_btn_anon_login);
@@ -86,7 +85,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         btnFacebook = (Button) findViewById(R.id.chat_sdk_btn_facebook_login);
         appIconImage = (ImageView) findViewById(R.id.app_icon);
 
-        if(!NM.auth().accountTypeEnabled(AccountDetails.Type.Facebook)) {
+         if(!NM.auth().accountTypeEnabled(AccountDetails.Type.Facebook)) {
             ((ViewGroup) btnFacebook.getParent()).removeView(btnFacebook);
         }
         if(!NM.auth().accountTypeEnabled(AccountDetails.Type.Twitter)) {

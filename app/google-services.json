@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "421553637428-3e99h82ghgsh4vmtpa9dck831mm0e8mn.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.ronny.sheplus",
-            "certificate_hash": "22fa7fafc3c2571c941b76ebb9765fc9143d9ac1"
-          }
-        },
-        {
           "client_id": "421553637428-jgs3t26bqts5lsm3j34akbt4obmp75m4.apps.googleusercontent.com",
           "client_type": 3
         }

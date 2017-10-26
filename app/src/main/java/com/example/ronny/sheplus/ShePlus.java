@@ -12,11 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import co.chatsdk.core.session.ChatSDK;
 import co.chatsdk.core.session.Configuration;
 import co.chatsdk.firebase.FirebaseModule;
 import co.chatsdk.firebase.file_storage.FirebaseFileStorageModule;
+import co.chatsdk.firebase.push.FirebasePushModule;
 import co.chatsdk.firebase.social_login.FirebaseSocialLoginModule;
 import co.chatsdk.ui.login.LoginActivity;
 
@@ -42,6 +46,9 @@ public class ShePlus extends AppCompatActivity
 // Create a new configuration
         Configuration.Builder builder = new Configuration.Builder(context);
 
+        builder.firebase("firebase_url", "firebase_root_path", "firebase_storage_url", "firebase_cloud_messaging_server_key");
+
+
 // Perform any configuration steps
 
 // Initialize the Chat SDK
@@ -49,12 +56,15 @@ public class ShePlus extends AppCompatActivity
 
         FirebaseSocialLoginModule.activate(getApplicationContext());
 
+        builder.twitterLoginEnabled(false);
 
 // Activate the Firebase module
         FirebaseModule.activate(context);
 
 // File storage is needed for profile image upload and image messages
         FirebaseFileStorageModule.activate();
+        FirebasePushModule.activateForFirebase();
+
 
 /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -74,6 +84,13 @@ public class ShePlus extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+
+    @Override
+    protected void attachBaseContext (Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     @Override
