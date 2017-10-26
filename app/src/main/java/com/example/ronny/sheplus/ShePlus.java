@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.firebase.FirebaseApp;
+
 import co.chatsdk.core.session.ChatSDK;
 import co.chatsdk.core.session.Configuration;
 import co.chatsdk.firebase.FirebaseModule;
@@ -38,10 +40,13 @@ public class ShePlus extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
 // Enable multi-dexing
         MultiDex.install(this);
 
         Context context = getApplicationContext();
+
+        FirebaseApp.initializeApp(context);
 
 // Create a new configuration
         Configuration.Builder builder = new Configuration.Builder(context);
@@ -54,7 +59,7 @@ public class ShePlus extends AppCompatActivity
 // Initialize the Chat SDK
         ChatSDK.initialize(builder.build());
 
-        FirebaseSocialLoginModule.activate(getApplicationContext());
+   //     FirebaseSocialLoginModule.activate(getApplicationContext());
 
         builder.twitterLoginEnabled(false);
 

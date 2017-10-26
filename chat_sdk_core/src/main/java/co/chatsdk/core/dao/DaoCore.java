@@ -30,7 +30,7 @@ import timber.log.Timber;
 public class DaoCore {
     private static final String TAG = DaoCore.class.getSimpleName();
     //private static final boolean DEBUG = Debug.DaoCore;
-    private static final String DB_NAME = "andorid-chatsdk-database";
+    private static final String DB_NAME = "sheplus-database";
     private static String dbName;
 
     public static final int ORDER_ASC = 0;

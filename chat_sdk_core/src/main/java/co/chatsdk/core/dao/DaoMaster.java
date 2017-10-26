@@ -112,7 +112,6 @@ public class DaoMaster extends AbstractDaoMaster {
             dropAllTables(db, true);
             onCreate(db);
         }
-
     }
 
 }
