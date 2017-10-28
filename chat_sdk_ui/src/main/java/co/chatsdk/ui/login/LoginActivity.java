@@ -47,7 +47,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private boolean exitOnBackPressed = false;
     private LinearLayout mainView;
     private boolean authenticating = false;
-
     protected EditText emailEditText;
     protected EditText passwordEditText;
 

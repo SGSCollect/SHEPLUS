@@ -24,6 +24,7 @@ import co.chatsdk.firebase.FirebaseModule;
 import co.chatsdk.firebase.file_storage.FirebaseFileStorageModule;
 import co.chatsdk.firebase.push.FirebasePushModule;
 import co.chatsdk.firebase.social_login.FirebaseSocialLoginModule;
+import co.chatsdk.ui.login.EmailPasswordLogin;
 import co.chatsdk.ui.login.LoginActivity;
 
 
@@ -163,7 +164,7 @@ public class ShePlus extends AppCompatActivity
         }
         else if(id==R.id.she_chat){
 
-            Intent chatsdk = new Intent(ShePlus.this, LoginActivity.class);
+            Intent chatsdk = new Intent(ShePlus.this, EmailPasswordLogin.class);
             startActivity(chatsdk);
         }
 

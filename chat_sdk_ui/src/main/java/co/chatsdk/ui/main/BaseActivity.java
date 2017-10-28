@@ -217,7 +217,11 @@ public class BaseActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+        public void hideProgressDialog() {
+            if (progressDialog != null && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+        }
 }
 
 

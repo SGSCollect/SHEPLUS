@@ -4,4 +4,5 @@
     <dimen name="chat_sdk_max_image_message_width">200dp</dimen>
     <dimen name="chat_sdk_max_image_message_height">200dp</dimen>
     <dimen name="chat_sdk_unread_message_indicator_width">5dp</dimen>
+
 </resources>
