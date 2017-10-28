@@ -41,6 +41,9 @@
             android:theme="@style/SdkTheme"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
 
+        <activity android:name="co.chatsdk.ui.contacts.SelectContactActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/ChatSDKSlidingTransactionTheme"/>
 
         <activity
             android:name=".ShePlus"
@@ -61,6 +64,30 @@
 
         <activity android:name=".Newsletter"
             android:parentActivityName=".ShePlus"/>
+        <activity android:name="co.chatsdk.ui.threads.ThreadDetailsActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/ChatSDKSlidingTransactionTheme"/>
+
+        <activity android:name="co.chatsdk.ui.chat.ChatActivity"
+            android:launchMode = "singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/ChatSDKSlidingTransactionTheme"/>
+
+        <activity android:name="co.chatsdk.ui.profile.EditProfileActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/SdkTheme"/>
+
+        <activity android:name="co.chatsdk.ui.profile.ProfileActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/SdkTheme"/>
+
+        <!--Crop image-->
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+
+        <!-- Google Maps Metadata-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
 
     </application>

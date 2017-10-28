@@ -32,6 +32,7 @@ import co.chatsdk.ui.utils.AppBackgroundMonitor;
 public class EmailPasswordLogin extends BaseActivity  implements View.OnClickListener{
 
     private static final String TAG = "EmailPassword";
+    private boolean exitOnBackPressed = false;
 
     private EditText mEmailField;
     private EditText mPasswordField;
@@ -138,6 +139,18 @@ public class EmailPasswordLogin extends BaseActivity  implements View.OnClickLis
                 });
         // [END sign_in_with_email]
     }
+
+    @Override
+    public void onBackPressed() {
+        if (exitOnBackPressed) {
+            // Exit the app.
+            // If logged out from the main context pressing back in the LoginActivity will get me back to the Main so this have to be done.
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else super.onBackPressed();}
 
     /*
 

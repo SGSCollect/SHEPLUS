@@ -182,7 +182,7 @@ public class EditProfileActivity extends BaseActivity {
                 .subscribe(new Action() {
             @Override
             public void run() throws Exception {
-                InterfaceManager.shared().a.startLoginActivity(getApplicationContext(), false);
+                InterfaceManager.shared().a.startEmailPasswordLogin(getApplicationContext(), false);
             }
         }, new Consumer<Throwable>() {
             @Override

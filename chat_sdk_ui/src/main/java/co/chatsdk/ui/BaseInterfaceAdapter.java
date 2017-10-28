@@ -32,6 +32,7 @@ import co.chatsdk.ui.chat.options.LocationChatOption;
 import co.chatsdk.ui.chat.options.MediaChatOption;
 import co.chatsdk.ui.contacts.ContactsFragment;
 import co.chatsdk.ui.contacts.SelectContactActivity;
+import co.chatsdk.ui.login.EmailPasswordLogin;
 import co.chatsdk.ui.login.LoginActivity;
 import co.chatsdk.ui.main.MainActivity;
 import co.chatsdk.ui.profile.EditProfileActivity;
@@ -138,8 +139,8 @@ public class BaseInterfaceAdapter implements InterfaceAdapter {
     }
 
     @Override
-    public Class getLoginActivity() {
-        return LoginActivity.class;
+    public Class getEmailPasswordLogin() {
+        return EmailPasswordLogin.class;
     }
 
     @Override
@@ -193,8 +194,8 @@ public class BaseInterfaceAdapter implements InterfaceAdapter {
         startActivity(context, intent);
     }
 
-    public void startLoginActivity(Context context, boolean attemptCachedLogin){
-        Intent intent = new Intent(context, getLoginActivity());
+    public void startEmailPasswordLogin(Context context, boolean attemptCachedLogin){
+        Intent intent = new Intent(context, getEmailPasswordLogin());
         intent.putExtra(ATTEMPT_CACHED_LOGIN, attemptCachedLogin);
         startActivity(context, intent);
     }

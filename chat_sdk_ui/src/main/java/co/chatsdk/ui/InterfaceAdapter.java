@@ -27,7 +27,7 @@ public interface InterfaceAdapter {
     Fragment contactsFragment ();
     Fragment profileFragment (User user);
 
-    Class getLoginActivity();
+    Class getEmailPasswordLogin();
     Class getMainActivity();
     Class getChatActivity();
     Class getThreadDetailsActivity();
@@ -48,7 +48,7 @@ public interface InterfaceAdapter {
     void startActivity(Context context, Class activity);
     void startActivity (Context context, Intent intent);
     void startChatActivityForID(Context context, String threadEntityID);
-    void startLoginActivity(Context context, boolean attemptCachedLogin);
+    void startEmailPasswordLogin(Context context, boolean attemptCachedLogin);
     void startProfileActivity(Context context, String userEntityID);
     void startEditProfileActivity(Context context, String userEntityID);
     void startMainActivity (Context context);
